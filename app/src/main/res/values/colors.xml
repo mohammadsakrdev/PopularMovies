@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="popular_movies_light">#B2DFDB</color>
+    <color name="popular_movies_teal">#4DB6AC</color>
+    <color name="popular_movies_dark">#00796B</color>
+</resources>

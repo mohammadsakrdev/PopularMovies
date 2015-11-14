@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/popular_movies_dark</item>
+        <item name="colorPrimaryDark">@color/popular_movies_teal</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="SettingsTheme" parent="AppTheme">
+    </style>
+
+</resources>

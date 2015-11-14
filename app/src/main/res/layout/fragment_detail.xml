@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.sakr.android.popularmovies.DetailFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="#009985"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="15dp"
+        android:textSize="45sp"
+        android:textColor="#ffffffff"/>
+
+    <ImageView
+        android:id="@+id/movieImagePoster"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout="@id/movieTitle"
+        android:layout_below="@+id/movieTitle"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/movieReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/movieImagePoster"
+        android:layout_toRightOf="@+id/movieImagePoster"
+        android:layout_toEndOf="@+id/movieImagePoster"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_below="@+id/movieTitle"
+        android:paddingTop="5dp"
+        android:layout_marginRight="40dp"
+        android:textStyle="bold"
+        android:textColor="#eb6c6c6c"/>
+
+    <TextView
+        android:id="@+id/movieLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:layout_below="@+id/movieReleaseDate"
+        android:layout_alignLeft="@+id/movieReleaseDate"
+        android:layout_alignStart="@+id/movieReleaseDate"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:textStyle="bold|italic"
+        android:textColor="#eb6c6c6c"/>
+
+    <TextView
+        android:id="@+id/movieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/movieLength"
+        android:layout_alignLeft="@+id/movieLength"
+        android:layout_alignStart="@+id/movieLength"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:textStyle="bold"
+        android:textColor="#010101"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favoriteBtn"
+        android:layout_below="@+id/movieRating"
+        android:layout_alignLeft="@+id/movieRating"
+        android:layout_alignStart="@+id/movieRating"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/popular_movies_light"/>
+
+    <TextView
+        android:id="@+id/movieOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/movieImagePoster"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"/>
+        <LinearLayout
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:background="#eb6c6c6c"
+            android:layout_below="@+id/movieOverview"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/separator"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+        <TextView
+            android:id="@+id/trailerLabelTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trailers:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#eb6c6c6c"/>
+
+        <com.sakr.android.popularmovies.view.CustomListView
+            android:id="@+id/trailer_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:divider="@drawable/abc_list_divider_mtrl_alpha"/>
+
+        <TextView
+            android:id="@+id/reviewLabelTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reviws:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#eb6c6c6c"/>
+
+        <com.sakr.android.popularmovies.view.CustomListView
+            android:id="@+id/reviewListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:divider="@drawable/abc_list_divider_mtrl_alpha"/>
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
